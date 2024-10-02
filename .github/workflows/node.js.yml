@@ -33,6 +33,6 @@ jobs:
     - run: npm install ./juice-shop
 
     - name: Run Snyk to check for vulnerabilities
-      uses: snyk/actions/dotnet@master
+      uses: snyk/actions/node@master
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
