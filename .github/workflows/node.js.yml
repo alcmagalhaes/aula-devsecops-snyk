@@ -23,15 +23,12 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: juice-shop/juice-shop
-        path: juice-shop
         
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cd juice-shop && npm install
-
-    - run: cd juice-shop
+    - run: npm install
 
     - name: Run Snyk to check for vulnerabilities
       uses: snyk/actions/node@master
